@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 u_c_key = os.getenv("UNIT-CONVERTOR-KEY")
+API_KEY = st.secrets["api"]["UNIT-CONVERTOR-KEY"]
 
 url = "https://api.happi.dev/v1/unit-converter"
 
@@ -15,7 +16,7 @@ params = {
 
 headers = {
     "accept": "application/json",
-    "x-happi-token": u_c_key
+    "x-happi-token": API_KEY
 }
 
 
